@@ -56,4 +56,12 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/GitInfo.cpp.in ${CMAKE_CURRENT_BINARY
 
 add_library(GitInfo MODULE GitInfo.cpp)
 target_include_directories(GitInfo PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(GitInfo PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
+
+include(GenerateExportHeader)
+generate_export_header(GitInfo
+    EXPORT_MACRO_NAME GITINFO_API
+    EXPORT_FILE_NAME ${CMAKE_CURRENT_BINARY_DIR}/GitInfo.api.h
+)
+
 

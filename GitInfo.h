@@ -1,6 +1,7 @@
 #pragma once
+#include "GitInfo.api.h"
 
-bool GitIsDirty();
-const char *GitCommitSHA1();
-const char *GitCommitDate();
-const char *GitDescribe();
+GITINFO_API bool GitIsDirty();
+GITINFO_API const char *GitCommitSHA1();
+GITINFO_API const char *GitCommitDate();
+GITINFO_API const char *GitDescribe();
