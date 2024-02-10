@@ -1,0 +1,16 @@
+
+bool GitIsDirty() {
+    return @GIT_IS_DIRTY@;
+}
+
+const char *GitCommitSHA1() {
+    return @GIT_COMMIT_SHA1@;
+}
+
+const char *GitCommitDate() {
+    return @GIT_COMMIT_DATE@;
+}
+
+const char *GitDescribe() {
+    return @GIT_DESCRIBE@;
+}
