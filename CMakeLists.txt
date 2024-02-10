@@ -21,9 +21,6 @@ macro(RunGitCommand)
     endif()
 endmacro()
 
-cmake_minimum_required(VERSION 3.22)
-project(GitVersion LANGUAGES CXX)
-
 RunGitCommand(status --porcelain -unormal)
 if(NOT "${LAST_GIT_OUTPUT}" STREQUAL "")
     set(GIT_IS_DIRTY "true")
