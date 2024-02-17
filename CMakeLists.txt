@@ -51,7 +51,7 @@ endif()
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/GitInfo.cpp.in ${CMAKE_CURRENT_BINARY_DIR}/GitInfo.cpp @ONLY)
 
-add_library(GitInfo MODULE GitInfo.cpp)
+add_library(GitInfo STATIC GitInfo.cpp)
 target_include_directories(GitInfo PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(GitInfo PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 
