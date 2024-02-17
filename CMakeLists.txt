@@ -35,7 +35,7 @@ else()
     set(GIT_COMMIT_SHA1 "\"\"")
 endif()
 
-RunGitCommand(describe --long HEAD)
+RunGitCommand(describe --long --tags --always HEAD)
 if(NOT "${LAST_GIT_OUTPUT}" STREQUAL "")
     set(GIT_DESCRIBE "\"${LAST_GIT_OUTPUT}\"")
 else()
