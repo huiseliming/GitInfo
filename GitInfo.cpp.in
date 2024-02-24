@@ -14,3 +14,15 @@ const char *GitCommitDate() {
 const char *GitDescribe() {
     return @GIT_DESCRIBE@;
 }
+
+const char *GitTagVersion() {
+    return @GIT_TAG_VERSION@;
+}
+
+const char *GitPatchVerison() {
+    return @GIT_PATCH_VERSION@;
+}
+
+const char *GitBuildVersion() {
+    return @GIT_BUILD_VERSION@;
+}
